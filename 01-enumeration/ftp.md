@@ -57,9 +57,9 @@ anonymous :
 ftp : ftp
 
 
->> ftp *\<IP\>*
->> anonymous
->> anonymous
+> ftp *\<IP\>*
+> anonymous
+> anonymous
 
 List all files (even hidden) (yes, they could be hidden)
 > ls -a 
