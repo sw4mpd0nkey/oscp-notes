@@ -75,3 +75,7 @@ Set transmission to ascii instead of binary
 
 exit
 > bye
+
+## Brute Force
+
+> hydra -C /usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt *\<IP\>* ftp
