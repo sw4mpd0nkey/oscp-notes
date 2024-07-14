@@ -59,6 +59,7 @@ anonymous :
 ftp : ftp
 ```
 
+Anonymous connection:
 > ftp *\<IP\>*
 > anonymous
 > anonymous
