@@ -52,10 +52,12 @@ STAT
 
 ## Anonymous login
 
+possible credentials:
+```
 anonymous : anonymous
 anonymous :
 ftp : ftp
-
+```
 
 > ftp *\<IP\>*
 > anonymous
