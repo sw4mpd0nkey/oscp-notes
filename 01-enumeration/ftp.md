@@ -3,15 +3,15 @@
 ## Banner Grabbing
 
 Will print any banner info
-> nc -vn *IP* 21
+> nc -vn *<IP>* 21
 
 Get certificate if any
-> openssl s_client -connect *IP*:21 -starttls ftp 
+> openssl s_client -connect *<IP>*:21 -starttls ftp 
 
 ## Unauth enum
 
 With nmap
-> sudo nmap -sV -p21 -sC -A *IP*
+> sudo nmap -sV -p21 -sC -A *<IP>*
 
 You can use the commands HELP and FEAT to obtain some information of the FTP server:
 ```
