@@ -13,7 +13,7 @@ Get certificate if any
 With nmap
 > sudo nmap -sV -p21 -sC -A <IP>
 You can use the commands HELP and FEAT to obtain some information of the FTP server:
-"HELP
+`HELP
 214-The following commands are recognized (* =>'s unimplemented):
 214-CWD     XCWD    CDUP    XCUP    SMNT*   QUIT    PORT    PASV    
 214-EPRT    EPSV    ALLO*   RNFR    RNTO    DELE    MDTM    RMD     
@@ -45,4 +45,4 @@ FEAT
 211 End
 
 STAT
-#Info about the FTP server (version, configs, status...)"
+#Info about the FTP server (version, configs, status...)`
