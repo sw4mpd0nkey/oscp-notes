@@ -78,4 +78,14 @@ exit
 
 ## Brute Force
 
+Here you can find a nice list with default ftp credentials: https://github.com/danielmiessler/SecLists/blob/master/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt
+
 > hydra -C /usr/share/seclists/Passwords/Default-Credentials/ftp-betterdefaultpasslist.txt *\<IP\>* ftp
+
+## Download all files from FTP
+
+Donwload all
+> wget -m ftp://anonymous:anonymous@*/<IP/>*
+
+Download all
+> wget -m --no-passive ftp://anonymous:anonymous@*/<IP/>*
