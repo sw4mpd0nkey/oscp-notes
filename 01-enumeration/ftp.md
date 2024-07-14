@@ -49,3 +49,22 @@ FEAT
 STAT
 #Info about the FTP server (version, configs, status...)
 ```
+
+## Anonymous login
+
+anonymous : anonymous
+anonymous :
+ftp : ftp
+
+
+> ftp *\<IP\>*
+> anonymous
+> anonymous
+List all files (even hidden) (yes, they could be hidden)
+> ls -a 
+Set transmission to binary instead of ascii
+> binary
+Set transmission to ascii instead of binary 
+> ascii 
+exit
+> bye
