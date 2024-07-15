@@ -85,7 +85,7 @@ Here you can find a nice list with default ftp credentials: https://github.com/d
 ## Download all files from FTP
 
 Donwload all
-> wget -m ftp://anonymous:anonymous@*/<IP/>*
+> wget -m ftp://anonymous:anonymous@*\<IP\>*
 
 Download all
-> wget -m --no-passive ftp://anonymous:anonymous@*/<IP/>*
+> wget -m --no-passive ftp://anonymous:anonymous@*\<IP\>*
