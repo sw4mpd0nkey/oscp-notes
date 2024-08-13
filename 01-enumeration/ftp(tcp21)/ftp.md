@@ -1,5 +1,7 @@
 # FTP Enumeration
 
+NOTE: always try logging in as admin:admin
+
 ## Banner Grabbing
 
 Will print any banner info
@@ -89,3 +91,6 @@ Donwload all
 
 Download all
 > wget -m --no-passive ftp://anonymous:anonymous@*\<IP\>*
+
+## Password Spray
+> hydra -L users -P /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt 192.168.191.46 ftp -V -f
