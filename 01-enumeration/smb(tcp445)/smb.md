@@ -20,6 +20,9 @@ IP address       NetBIOS Name     Server    User             MAC address
 Single host OS Discovery
 > nmap -v -p 139,445 --script smb-os-discovery 192.168.50.152
 
+Listing shares
+> smbmap -H 192.168.158.121
+
 Vulnerability Scans
 > nmap -p 139,445 --script smb-vuln* 192.168.199.240
 
