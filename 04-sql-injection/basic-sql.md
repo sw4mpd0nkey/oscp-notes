@@ -1,5 +1,50 @@
 ## Basic SQL Reminders
 
+### For OSCp
+
+ - mysql
+ - sqlserver
+
+MySql
+
+Connecting:
+
+mysql -u <username> -p <password> -h <host ip> -p <port> 
+	
+Important Functions etc
+ - version : shows running version
+ - select system_user() : returns current user name and host names
+ - show databases;
+ - select user, authentication_string FROM mysql.user WHERE user = '';
+ 
+ 
+SQL Server
+ 
+Connecting:
+ 	impacket-mssqlclient <username>:<password>@<ip of box> -windows-auth
+
+Important Functions etc
+ - select @@version
+ - select name FROM sys.databases
+ - select * from offsec.infromation_schema.tables
+ - select * fro offsec.dbo.users
+
+ #### id'ing sqli
+ <?php
+$uname = $_POST['uname'];
+$passwd = $_POST['password'];
+
+$sql_query = "SELECT * FROM users WHERE user_name = '$uname' AND password='$passwd'";
+$result = mysqli_query($con, $sql_query);
+?>
+
+offsec' OR 1=1 -- //
+' OR 1=1 in (select @@version) -- //
+
+
+
+### Generic
+
 Using the mysql command, we'll connect to the remote SQL instance by specifying root as username and password, along with the default MySQL server port 3306.
 > mysql -u root -p'root' -h 192.168.50.16 -P 3306
 
