@@ -41,6 +41,23 @@ $result = mysqli_query($con, $sql_query);
 offsec' OR 1=1 -- //
 ' OR 1=1 in (select @@version) -- //
 
+### Determining the type of database
+
+|Type of db| method|
+|----------|------|
+|MySQL|SELECT @@version|
+|SQLite|SELECT sqlite_version()|
+|Microsoft|SELECT @@version|
+|PostgreSQL|SELECT version()|
+|Oracle|SELECT banner FROM v$version, SELECT version FROM v$instance|
+
+### Commenting in SQL
+
+|syntax|mysql|ms sql|oracle|notes|
+|------|-----|------|------|-----|
+| --   | yes | yes  | yes  | The double dash is used to comment the rest of the line. My MySQL however this operator myst be followed by at least one white space or control character|
+| #    | yes | no   | no   | The nuber sign allos commenting the rest of the line in MySQL. Contrary to the double dash, it is not necessary to add whitespace after|
+| /* */| yes | yes  | yes  |     |
 
 
 ### Generic
