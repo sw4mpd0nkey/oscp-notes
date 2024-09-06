@@ -31,3 +31,6 @@ smbmap [-u "username" -p "password"] -R [Folder] -H <IP> [-P <PORT>] # Recursive
 smbmap [-u "username" -p "password"] -r [Folder] -H <IP> [-P <PORT>] # Non-Recursive list
 smbmap -u "username" -p "<NT>:<LM>" [-r/-R] [Folder] -H <IP> [-P <PORT>] #Pass-the-Hash
 ```
+
+### Download all filed in sn smb share
+> smbget --recursive smb://192.168.202.248/Users --user anonymous%anonymous

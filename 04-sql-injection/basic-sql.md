@@ -5,29 +5,40 @@
  - mysql
  - sqlserver
 
-MySql
 
-Connecting:
+### mysql
+MySQL is one of the most commonly deployed database variants, along with MariaDB, an open-source fork of MySQL.
 
-mysql -u <username> -p <password> -h <host ip> -p <port> 
-	
-Important Functions etc
- - version : shows running version
- - select system_user() : returns current user name and host names
- - show databases;
- - select user, authentication_string FROM mysql.user WHERE user = '';
- 
- 
-SQL Server
- 
-Connecting:
- 	impacket-mssqlclient <username>:<password>@<ip of box> -windows-auth
+connect
+> mysql -u root -p'root' -h 192.168.50.16 -P 3306
 
-Important Functions etc
- - select @@version
- - select name FROM sys.databases
- - select * from offsec.infromation_schema.tables
- - select * fro offsec.dbo.users
+after connecting, seeing version
+> select version();
+
+show current db user
+> select system_user();
+
+shown list of databases
+> show databases;
+
+pull single users auth string
+> SELECT user, authentication_string FROM mysql.user WHERE user = 'offsec';
+
+### MSSQL
+MSSQL is a database management system that natively integrates into the Windows ecosystem.
+
+using impacket to connect 
+> impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth
+
+after connecting show version
+> SELECT @@version;
+
+show list of databses
+> SELECT name FROM sys.databases;
+
+review a database called offsec by querying the tables table in the corresponding information_schema.
+> SELECT * FROM offsec.information_schema.tables;
+
 
  #### id'ing sqli
  <?php
